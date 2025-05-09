@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Burger - Las Mejores Hamburguesas</title>
+    <link rel="stylesheet" href="workwithus.css">
+</head>
+<body>
+    <header id="inicio">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="/frontend/LOGO/Preview__1_-removebg-preview-removebg-preview.png" alt="The Last Burger - Logo" class="logo-image">
+                <div class="logo-text">
+                    <a href="/index.html" class="main-title">THE LAST BURGER</a>
+                    <div class="slogan">More than hamburgers, an experience</div>
+                </div>
+            </div>
+           
+           
+            <nav class="main-nav">
+                <ul>
+                 
+                    <li><a href="/index.html#menu">Menu</a></li>
+                    <li><a href="/index.html#promociones">Promotions</a></li>
+                    <li><a href="/index.html#sucursales">Branches</a></li>
+                    <li><a href="/index.html#contacto">Contact</a></li>
+                    <li><a href="/index.html#faq">Questions and answers</a></li>
+                    <li><a href="/workwithus.html">WORK WITH US</a></li> <!-- Añadido -->
+                    <li><a href="/index.html#mapa">Find us on the map</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+       <!-- Botón para abrir el modal -->
+       <div style="text-align: center; margin-top: 50px;">
+        <a href="/registro.html" class="btn-login" id="openLoginBtn">REGISTRATION / LOGIN</a>
+    </div>
+
+
+    <!-- Modal de Login/Registro -->
+    <div id="loginModal" class="modal-container">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+           
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+           
+            <!-- Formulario de Login -->
+            <div id="login" class="tab-content active">
+                <h2>welcome back</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+               
+                <div class="social-login">
+                    <p>Or log in with:</p>
+                    <a href="#" class="social-btn">f</a>
+                    <a href="#" class="social-btn">G</a>
+                    <a href="#" class="social-btn">in</a>
+                </div>
+            </div>
+           
+            <!-- Formulario de Registro -->
+            <div id="register" class="tab-content">
+                <h2>Join us</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regName">Full name</label>
+                        <input type="text" id="regName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirm">Confirm Password</label>
+                        <input type="password" id="regConfirm" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+   
+    <section class="careers-section" id="trabaja-con-nosotros">
+        <div class="container">
+            <h2>Join our team!</h2>
+            <p>We're looking for a Web Application Developer to join our **The Last Burger** family. If you're passionate about technology and want to contribute to the development of our digital platforms, this opportunity is for you!</p>
+   
+            <div class="vacancy-details">
+                <h3>Vacancy: Web Application Developer</h3>
+               
+                <h4>Minimum Requirements:</h4>
+                <ul>
+                    <li>Minimum of 2 years experience in web development (Frontend/Backend).</li>
+                    <li>Mastery of technologies such as HTML, CSS, JavaScript, and frameworks such as React or Angular.</li>
+                    <li>Knowledge of databases and servers.</li>
+                    <li>Experience in mobile application development is a plus.</li>
+                    <li>Ability to work in a team and under pressure.</li>
+                </ul>
+   
+                <h4>Aspects to Assess:</h4>
+                <ul>
+                    <li>Creativity and innovation in technological solutions.</li>
+                    <li>Knowledge of UX/UI and experience in responsive web design.</li>
+                    <li>Passion for new technologies and trends in web development.</li>
+                    <li>Proactive and results-oriented attitude.</li>
+                </ul>
+               
+                 <div class="apply-now">
+                    <p>If you meet the requirements and are interested in joining our team, we look forward to hearing from you!</p>
+       
+                    <!-- Botón "Postúlate ahora" -->
+                  <button id="postulate-btn">Apply now</button>
+
+
+
+
+                 <!-- Modal con el formulario -->
+                 <div id="postulate-modal" class="modal">
+                  <div class="modal-content">
+                   <span class="close-btn" id="close-btn">&times;</span>
+                  <h2>Application Form</h2>
+                  <form id="postulate-form">
+                  <label for="nombre">Name:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+
+
+
+                    <label for="apellido">Last name:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+
+
+
+
+                    <label for="telefono">Phone:</label>
+                 <input type="tel" id="telefono" name="telefono" required>
+
+
+
+
+                 <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+   
+   
+    
+   
+   
+    <footer id="contacto">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Horario -->
+                <div class="footer-section">
+                    <div class="footer-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Horario</h3>
+                    <div class="footer-content">
+                        <p>Monday to Friday: <span>11am - 10pm</span></p>
+                        <p>Saturday and Sunday: <span>12pm - 11pm</span></p>
+                    </div>
+                </div>
+               
+                <!-- Contacto -->
+                <div class="footer-section">
+                    <div class="footer-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3>Contacto</h3>
+                    <div class="footer-content">
+                        <p><a href="tel:976610209">Tel: 976 610 209</a></p>
+                        <p><a href="mailto:info@TheLastBurger.com">Email: info@TheLastBurger.com</a></p>
+                        <p><a href="https://wa.me/976610209">WhatsApp: 976 610 209</a></p>
+                    </div>
+                </div>
+               
+                <!-- Redes Sociales -->
+                <div class="footer-section">
+                    <div class="footer-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </div>
+                    <h3>Social networks</h3>
+                    <div class="footer-content social-links">
+                        <p><a href="https://facebook.com/TheLastBurger" target="_blank">@TheLastBurger</a></p>
+                        <p><a href="https://instagram.com/TheLastBurger" target="_blank">@TheLastBurger</a></p>
+                        <p><a href="https://tiktok.com/@TheLastBurger" target="_blank">@TheLastBurger</a></p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="footer-bottom">
+                <p>&copy; 2025 TheLastBurger. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+   
+
+
+
