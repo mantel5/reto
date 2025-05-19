@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [14/May/2025:19:38:54 +0200] "GET /TestAlecove/Controller HTTP/1.1" 404 714
+0:0:0:0:0:0:0:1 - - [14/May/2025:19:38:54 +0200] "GET /favicon.ico HTTP/1.1" 404 611
+0:0:0:0:0:0:0:1 - - [14/May/2025:19:39:28 +0200] "GET /TestAlecove/Controller HTTP/1.1" 500 1324
+0:0:0:0:0:0:0:1 - - [14/May/2025:19:42:40 +0200] "GET /TestAlecove/Controller?accion=listar HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [14/May/2025:19:42:54 +0200] "GET /TestAlecove/Controller?accion=listar HTTP/1.1" 200 18
+0:0:0:0:0:0:0:1 - - [14/May/2025:19:46:07 +0200] "GET /TestAlecove/Controller?accion=listar HTTP/1.1" 200 147
+0:0:0:0:0:0:0:1 - - [14/May/2025:19:55:13 +0200] "GET /TestAlecove/Controller?accion=listar HTTP/1.1" 200 228
+0:0:0:0:0:0:0:1 - - [14/May/2025:19:57:19 +0200] "GET /TestAlecove/Controller?accion=listar HTTP/1.1" 200 499
+127.0.0.1 - - [14/May/2025:20:04:02 +0200] "GET /TestAlecove/Controller?accion=listar HTTP/1.1" 200 499
+127.0.0.1 - - [14/May/2025:20:04:07 +0200] "POST /TestAlecove/Controller?accion=listar HTTP/1.1" 200 499
+127.0.0.1 - - [14/May/2025:20:04:08 +0200] "POST /TestAlecove/Controller?accion=listar HTTP/1.1" 200 499
+127.0.0.1 - - [14/May/2025:20:04:18 +0200] "GET /TestAlecove/Controller?accion=listar HTTP/1.1" 200 499
+0:0:0:0:0:0:0:1 - - [14/May/2025:20:10:39 +0200] "GET /TestAlecove/Controller?accion=listar HTTP/1.1" 200 499
+0:0:0:0:0:0:0:1 - - [14/May/2025:20:11:09 +0200] "GET /TestAlecove/Controller? HTTP/1.1" 500 1324
+0:0:0:0:0:0:0:1 - - [14/May/2025:20:11:13 +0200] "GET /TestAlecove/Controller HTTP/1.1" 500 1324
+0:0:0:0:0:0:0:1 - - [14/May/2025:20:11:20 +0200] "GET /TestAlecove/Controller?accion=listar HTTP/1.1" 200 499

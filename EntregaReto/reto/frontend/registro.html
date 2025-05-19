@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Burger - Las Mejores Hamburguesas</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+    <header id="inicio">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="/frontend/LOGO/Preview__1_-removebg-preview-removebg-preview.png" alt="The Last Burger - Logo" class="logo-image">
+                <div class="logo-text">
+                    <a href="/frontend/index.html" class="main-title">THE LAST BURGER</a>
+                    <div class="slogan">More than hamburgers, an experience</div>
+                </div>
+            </div>
+           
+           
+            <nav class="main-nav">
+                <ul>
+                 
+                    <li><a href="/frontend/index.html#menu">Menu</a></li>
+                    <li><a href="/frontend/index.html#promociones">Promotions</a></li>
+                    <li><a href="/frontend/index.html#sucursales">Branches</a></li>
+                    <li><a href="/frontend/index.html#contacto">Contact</a></li>
+                    <li><a href="/frontend/index.html#faq">Questions and answers</a></li>
+                    <li><a href="/frontend/workwithus.html#trabaja-con-nosotros">WORK WITH US</a></li> <!-- Añadido -->
+                    <li><a href="/frontend/index.html#mapa">Find us on the map</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+       <!-- Botón para abrir el modal -->
+       <div style="text-align: center; margin-top: 50px;">
+        <button class="btn-login" id="openLoginBtn">REGISTRATION / LOGIN</button>
+    </div>
+
+
+    <!-- Modal de Login/Registro -->
+    <div id="loginModal" class="modal-container">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+           
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+           
+            <!-- Formulario de Login -->
+            <div id="login" class="tab-content active">
+                <h2>welcome back</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+               
+                <div class="social-login">
+                    <p>Or log in with:</p>
+                    <a href="#" class="social-btn">f</a>
+                    <a href="#" class="social-btn">G</a>
+                    <a href="#" class="social-btn">in</a>
+                </div>
+            </div>
+           
+            <!-- Formulario de Registro -->
+            <div id="register" class="tab-content">
+                <h2>Join us</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regName">Full name</label>
+                        <input type="text" id="regName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirm">Confirm Password</label>
+                        <input type="password" id="regConfirm" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+<body>
+       
+
+
+
+
+<!-- Incluir el JavaScript de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+        <script>
+     // Crear el mapa y centrarlo en la ubicación de Fremont St, Las Vegas
+        var map = L.map('map').setView([36.1643, -115.1468], 13); // Coordenadas de la ubicación
+
+
+        // Añadir capa de mapa (OpenStreetMap en este caso)
+     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+     }).addTo(map);
+
+
+     // Añadir un marcador en la ubicación de la dirección
+     L.marker([36.1643, -115.1468]).addTo(map)
+        .bindPopup('<b>50 Fremont St #130, Las Vegas, NV 89101</b>')
+        .openPopup();
+    </script>
+
+
+
+
+</body>
+   
+   
+    <footer id="contacto">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Horario -->
+                <div class="footer-section">
+                    <div class="footer-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Horario</h3>
+                    <div class="footer-content">
+                        <p>Monday to Friday: <span>11am - 10pm</span></p>
+                        <p>Saturday and Sunday: <span>12pm - 11pm</span></p>
+                    </div>
+                </div>
+               
+                <!-- Contacto -->
+                <div class="footer-section">
+                    <div class="footer-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3>Contacto</h3>
+                    <div class="footer-content">
+                        <p><a href="tel:976610209">Tel: 976 610 209</a></p>
+                        <p><a href="mailto:info@TheLastBurger.com">Email: info@TheLastBurger.com</a></p>
+                        <p><a href="https://wa.me/976610209">WhatsApp: 976 610 209</a></p>
+                    </div>
+                </div>
+               
+                <!-- Redes Sociales -->
+                <div class="footer-section">
+                    <div class="footer-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </div>
+                    <h3>Social networks</h3>
+                    <div class="footer-content social-links">
+                        <p><a href="https://facebook.com/TheLastBurger" target="_blank">@TheLastBurger</a></p>
+                        <p><a href="https://instagram.com/TheLastBurger" target="_blank">@TheLastBurger</a></p>
+                        <p><a href="https://tiktok.com/@TheLastBurger" target="_blank">@TheLastBurger</a></p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="footer-bottom">
+                <p>&copy; 2025 TheLastBurger. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+   
+
+
+

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Burger - Las Mejores Hamburguesas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="inicio">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="/frontend/LOGO/Preview__1_-removebg-preview-removebg-preview.png" alt="The Last Burger - Logo" class="logo-image">
+                <div class="logo-text">
+                    <a href="/frontend/index.html" class="main-title">THE LAST BURGER</a>
+                    <div class="slogan">More than hamburgers, an experience</div>
+                </div>
+            </div>
+           
+           
+            <nav class="main-nav">
+                <ul>
+                 
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#promociones">Promotions</a></li>
+                    <li><a href="#sucursales">Branches</a></li>
+                    <li><a href="#contacto">Contact</a></li>
+                    <li><a href="#faq">Questions and answers</a></li>
+                    <li><a href="/frontend/workwithus.html">WORK WITH US</a></li> <!-- Añadido -->
+                    <li><a href="#mapa">Find us on the map</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+       <!-- Botón para abrir el modal -->
+       <div style="text-align: center; margin-top: 50px;">
+        <a href="/frontend/registro.html" class="btn-login" id="openLoginBtn">REGISTRATION / LOGIN</a>
+    </div>
+
+
+    <!-- Modal de Login/Registro -->
+    <div id="loginModal" class="modal-container">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+           
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+           
+            <!-- Formulario de Login -->
+            <div id="login" class="tab-content active">
+                <h2>welcome back</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+               
+                <div class="social-login">
+                    <p>Or log in with:</p>
+                    <a href="#" class="social-btn">f</a>
+                    <a href="#" class="social-btn">G</a>
+                    <a href="#" class="social-btn">in</a>
+                </div>
+            </div>
+           
+            <!-- Formulario de Registro -->
+            <div id="register" class="tab-content">
+                <h2>Join us</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regName">Full name</label>
+                        <input type="text" id="regName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirm">Confirm Password</label>
+                        <input type="password" id="regConfirm" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" id="menu">
+        <main class="menu">
+            <h2>Our Burgers</h2> <!-- Hamburguesas-->
+           
+            <div class="burgers-grid" id="burgers-container">
+            <!-- Se cargarán las hamburguesas aquí -->
+            </div>
+
+            <!-- Sección de Entrantes -->
+            <section id="entrantes">
+            <h2>Starters</h2>
+            <div class="entrantes-container" id="starters-container">
+            <!-- Se cargarán los entrantes aquí -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+        </main>
+        <div class="beverages-section">
+            <h2 class="section-title">Our Drinks</h2>
+            <div class="beverages-grid" id="drinks-container">
+            <!-- Se cargarán las bebidas aquí -->
+            </div>
+        </div>
+       
+        <aside class="sidebar">
+            <div class="cart">
+                <div class="cart-title">
+                    <h2>🛒Your Order</h2>
+                </div>
+               
+                <div class="cart-items" id="cart-items">
+                    <p id="empty-cart-message">Your cart is empty</p>
+                </div>
+               
+                <div class="cart-total">
+                    Total: $<span id="cart-total">0</span>
+                </div>
+               
+                <button class="checkout-btn" id="checkout-btn">Place Order</button>
+               
+                <button class="clear-cart" id="clear-cart">Empty Cart</button>
+               
+            </div>
+        </aside>
+    </div>
+
+
+
+
+    <section class="promotions-section" id="promociones">
+        <div class="container">
+            <h2>Special Promotions</h2>
+            <div class="promotions-grid">
+                <div class="promo-card">
+                    <div class="promo-image">
+                        <img src="https://images.unsplash.com/photo-1619881590738-a111d176d906?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Combo Familiar">
+                    </div>
+                    <div class="promo-content">
+                        <h3>Family offer</h3>
+                        <p>4 burgers + 4 drinks + giant fries</p>
+                        <div class="promo-price">
+                            <span class="current-price">$50</span>
+                            <span class="original-price">$70</span>
+                        </div>
+                        <button class="add-promo" data-promo="combo-familiar">Add offer </button>
+                    </div>
+                </div>
+               
+                <div class="promo-card">
+                    <div class="promo-image">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Martes de Hamburguesa">
+                    </div>
+                    <div class="promo-content">
+                        <h3>Burger Tuesday</h3>
+                        <p>2 burgers for the price of 1 every Tuesday</p>
+                        <div class="promo-price">
+                            <span class="current-price">$12</span>
+                            <span class="original-price">$24</span>
+                        </div>
+                        <button class="add-promo" data-promo="martes-hamburguesa">Add offer</button>
+                    </div>
+                </div>
+               
+                <div class="promo-card">
+                    <div class="promo-image">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Happy Hour">
+                    </div>
+                    <div class="promo-content">
+                        <h3>Happy Hour</h3>
+                        <p>20% off drinks from 4pm to 7pm</p>
+                        <div class="promo-price">
+                            <span class="current-price">$2,4</span>
+                            <span class="original-price">$3</span>
+                        </div>
+                        <button class="add-promo" data-promo="happy-hour">Add offer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="locations-section" id="sucursales">
+        <div class="container">
+            <h2>Our Branches</h2>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <div class="location-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3>Center</h3>
+                    <p>Av. Principal #123</p>
+                    <p>Monday to Sunday: 11am - 11pm</p>
+                    <p>Tel: 692548963</p>
+                </div>
+                <div class="location-card">
+                    <div class="location-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>  
+                        </svg>
+                    </div>
+                    <h3>North Zone</h3>
+                    <p>Street North #456</p>
+                    <p>Monday to Sunday: 11am - 10pm</p>
+                    <p>Tel: 693248949</p>
+                </div>
+                <div class="location-card">
+                    <div class="location-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3>Sun Square</h3>
+                    <p>Local Shopping Plaza #34</p>
+                    <p>Monday to Sunday: 12pm - 10pm</p>
+                    <p>Tel: 692548969</p>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+ 
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-box">
+                        <h3 class="faq-question">What are your payment methods?</h3>
+                        <div class="faq-answer">
+                            <p>We accept cash, all major credit and debit cards, and mobile payments like Apple Pay and Google Pay.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-box">
+                        <h3 class="faq-question">Do you deliver?</h3>
+                        <div class="faq-answer">
+                            <p>Yes, we deliver through our own service and also work with major delivery platforms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-box">
+                        <h3 class="faq-question">Do you have vegetarian/vegan options?</h3>
+                        <div class="faq-answer">
+                            <p>Yes, we have several vegetarian and vegan options on our menu, including our famous Veggie Burger.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-box">
+                        <h3 class="faq-question">Can I make reservations?</h3>
+                        <div class="faq-answer">
+                            <p>We do not accept reservations as we work on a first-come, first-served basis, except for groups larger than 8 people.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-box">
+                        <h3 class="faq-question">Do you have parking?</h3>
+                        <div class="faq-answer">
+                            <p>Our Downtown branch has its own parking lot. Public parking is available nearby at other branches.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-box">
+                        <h3 class="faq-question">Can I customize my burger?</h3>
+                        <div class="faq-answer">
+                            <p>Absolutely! You can request any modification to our burgers at no additional cost.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="hidden div">
+        <section class="careers-section" id="trabaja-con-nosotros">
+            <div class="container">
+                <h2>Join our team!</h2>
+                <p>We're looking for a Web Application Developer to join our **The Last Burger** family. If you're passionate about technology and want to contribute to the development of our digital platforms, this opportunity is for you!</p>
+       
+                <div class="vacancy-details">
+                    <h3>Vacancy: Web Application Developer</h3>
+                    
+                    <h1>Minimum Requirements:
+
+                    Minimum Education:
+                    
+                    University degree in Systems Engineering, Programming, or related disciplines.
+                    
+                    Additional training (courses, certifications, etc.) in web technologies will be an asset.
+                    
+                    Languages:
+                    
+                    Intermediate level of English (B1 or higher), in both written and oral skills.
+                    
+                    Other languages will be considered favorably.
+                    
+                    Specific Knowledge:
+                    
+                    Proficiency in programming languages such as HTML5, CSS3, JavaScript and current frameworks (React, Angular, Vue.js, among others).
+                    
+                    Experience in backend development (Node.js, Express, Django, etc.).
+                    
+                    Knowledge in SQL and NoSQL database systems (MySQL, MongoDB, PostgreSQL).
+                    
+                    Knowledge of version control tools (Git, GitHub/GitLab).
+                    
+                    Knowledge of agile methodologies (Scrum, Kanban).
+                    
+                    Experience:
+                    
+                    At least 2 years of verifiable experience building web applications.
+                    
+                    Experience working in collaborative environments and groups of diverse disciplines.
+                    
+                    Job Skills and Abilities:
+                    
+                    Problem solving and analytical reasoning skills.
+                    
+                    Effective communication and group collaboration.
+                    
+                    Desire to acquire knowledge and adjust to technological innovations.
+                    
+                    Proactive and responsible behavior.
+                    
+                    Abilities to handle tasks independently.
+                    
+                    Position Category:
+                    
+                    Junior or Senior Web Application Developer (depending on experience).
+                    
+                    
+                    Job Duties:
+                    
+                    Creating and supporting web applications, covering both frontend and backend.
+                    
+                    Work with the design and UX/UI team to develop effective and attractive user interfaces.
+                    
+                    Execute tests and fix code bugs.
+                    
+                    Manage and improve application efficiency.
+                    
+                    Manage databases and ensure the integrity and protection of information.
+                    
+                    Develop creative solutions in software initiatives.
+                    
+                    Job Requirements:
+                    
+                    Salary:
+                    
+                    According to experience and skills (between €24,000 and €40,000 per year).
+                    
+                    Opportunity for value increase after performance evaluation.
+                    
+                    Working hours:
+                    
+                    Full time.
+                    
+                    Availability of flexible hours and the possibility of remote work (advanced remote work skills will be a benefit).
+                    
+                    Election Process:
+                    
+                    Application Submission: Send your updated CV, portfolio (if you have one) and motivation letter to our Human Resources email.
+                    
+                    Evaluation of applications: We will analyze your profile according to the requirements and previous experience.
+                    
+                    Technical interview: A conversation in which we will discuss your technical skills and solutions to practical problems.
+                    
+                    Individual interview: We want to get to know you better, talk about your professional behavior and how you would integrate into the team.
+                    
+                    Final proposal: If you are selected, we will make you an official job offer including all the details.</h1>
+                    
+                    
+                    
+                       
+                    </ul>
+                   
+                     <div class="apply-now">
+                        <p>If you meet the requirements and are interested in joining our team, we look forward to hearing from you!</p>
+           
+                        <!-- Botón "Postúlate ahora" -->
+                      <button id="postulate-btn">Apply now</button>
+    
+    
+    
+    
+                     <!-- Modal con el formulario -->
+                     <div id="postulate-modal" class="modal">
+                      <div class="modal-content">
+                       <span class="close-btn" id="close-btn">&times;</span>
+                      <h2>Application Form</h2>
+                      <form id="postulate-form">
+                      <label for="nombre">Name:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+    
+    
+    
+    
+                        <label for="apellido">Last name:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+    
+    
+    
+    
+                        <label for="telefono">Phone:</label>
+                     <input type="tel" id="telefono" name="telefono" required>
+    
+    
+    
+    
+                     <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+    
+    
+    
+    
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </div>
+   
+   
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map with Leaflet</title>
+
+
+    <!-- Incluir el CSS de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<body>
+       
+
+
+   <!-- Caja blanca que contiene tanto el texto como el mapa -->
+   <div class="map-container" id="mapa">
+     <!-- Título dentro de la caja -->
+     <h1>Welcome to The Last Burger</h1>
+   
+     <!-- Párrafo dentro de la caja -->
+     <p>We hope we're near you, and if we're not, it'll be worth your visit. We look forward to seeing you.</p>
+
+
+
+
+
+
+     <!-- El mapa aparecerá aquí dentro -->
+        <div id="map"></div>
+    </div>
+   
+
+
+
+
+<!-- Incluir el JavaScript de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+        <script>
+     // Crear el mapa y centrarlo en la ubicación de Fremont St, Las Vegas
+        var map = L.map('map').setView([36.1643, -115.1468], 13); // Coordenadas de la ubicación
+
+
+        // Añadir capa de mapa (OpenStreetMap en este caso)
+     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+     }).addTo(map);
+
+
+     // Añadir un marcador en la ubicación de la dirección
+     L.marker([36.1643, -115.1468]).addTo(map)
+        .bindPopup('<b>50 Fremont St #130, Las Vegas, NV 89101</b>')
+        .openPopup();
+    </script>
+
+
+
+
+</body>
+   
+   
+    <footer id="contacto">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Horario -->
+                <div class="footer-section">
+                    <div class="footer-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>hours</h3>
+                    <div class="footer-content">
+                        <p>Monday to Friday: <span>11am - 10pm</span></p>
+                        <p>Saturday and Sunday: <span>12pm - 11pm</span></p>
+                    </div>
+                </div>
+               
+                <!-- Contacto -->
+                <div class="footer-section">
+                    <div class="footer-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3>Contact</h3>
+                    <div class="footer-content">
+                        <p><a href="tel:976610209">Tel: 976 610 209</a></p>
+                        <p><a href="mailto:info@TheLastBurger.com">Email: info@TheLastBurger.com</a></p>
+                        <p><a href="https://wa.me/976610209">WhatsApp: 976 610 209</a></p>
+                    </div>
+                </div>
+               
+                <!-- Redes Sociales -->
+                <div class="footer-section">
+                    <div class="footer-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </div>
+                    <h3>Social networks</h3>
+                    <div class="footer-content social-links">
+                        <p><a href="https://facebook.com/TheLastBurger" target="_blank">@TheLastBurger</a></p>
+                        <p><a href="https://instagram.com/TheLastBurger" target="_blank">@TheLastBurger</a></p>
+                        <p><a href="https://tiktok.com/@TheLastBurger" target="_blank">@TheLastBurger</a></p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="footer-bottom">
+                <p>&copy; 2025 TheLastBurger. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    <script src="/frontend/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+   
+
+
+
