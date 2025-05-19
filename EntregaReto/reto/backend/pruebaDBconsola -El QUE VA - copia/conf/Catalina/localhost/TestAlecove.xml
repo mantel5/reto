@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context docBase="D:\PERSONAS\Marcos\Clases\Reto1Evaluacion\programación\pruebaDBconsola -El QUE VA - copia\src\webapp">
+  <Resources cacheMaxSize="10240">
+    <PreResources base="D:/PERSONAS/Marcos/Clases/Reto1Evaluacion/programación/pruebaDBconsola -El QUE VA - copia/target/classes" className="org.apache.catalina.webresources.DirResourceSet" webAppMount="/WEB-INF/classes"/>
+    <PostResources base="C:/Users/S2-PC00/.m2/repository/com/mysql/mysql-connector-j/9.3.0/mysql-connector-j-9.3.0.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/mysql-connector-j-9.3.0.jar"/>
+    <PostResources base="D:/PERSONAS/Marcos/Clases/Reto1Evaluacion/programación/pruebaDBconsola -El QUE VA - copia/lib/protobuf-java-4.29.0.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/protobuf-java-4.29.0.jar"/>
+    <PostResources base="D:/PERSONAS/Marcos/Clases/Reto1Evaluacion/programación/pruebaDBconsola -El QUE VA - copia/lib/mysql-connector-j-9.3.0.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/mysql-connector-j-9.3.0.jar"/>
+    <PostResources base="D:/PERSONAS/Marcos/Clases/Reto1Evaluacion/programación/pruebaDBconsola -El QUE VA - copia/lib/javax.servlet-api-4.0.1.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/javax.servlet-api-4.0.1.jar"/>
+  </Resources>
+</Context>
